@@ -12,7 +12,7 @@ $ go get github.com/andreimilas/rest-api-client
 #### GET
 ```
 import (
-    apiClient "github.com/andreimilas/rest-api-client/client"
+    apiClient "github.com/andreimilas/rest-api-client"
 )
 
 ...
@@ -32,8 +32,8 @@ if err != nil {
 }
 
 // Send the API request
-responseBody = &Response{}
-httpResponse, err := client.Do(apiRequest, responseBody)
+responseBody = &map[string]interface{}{}
+apiResponse, err := client.Do(apiRequest, responseBody)
 if err != nil {
     return nil, err
 }
@@ -42,7 +42,7 @@ if err != nil {
 #### POST
 ```
 import (
-    apiClient "github.com/andreimilas/rest-api-client/client"
+    apiClient "github.com/andreimilas/rest-api-client"
 )
 
 ...
@@ -65,8 +65,8 @@ if err != nil {
 }
 
 // Send the API request
-respone = &Response{}
-apiResp, err := client.Do(apiRequest, cAccResponse)
+responseBody = &map[string]interface{}{}
+apiResponse, err := client.Do(apiRequest, responseBody)
 if err != nil {
     return nil, err
 }
@@ -75,7 +75,7 @@ if err != nil {
 #### PUT
 ```
 import (
-    apiClient "github.com/andreimilas/rest-api-client/client"
+    apiClient "github.com/andreimilas/rest-api-client"
 )
 
 ...
@@ -98,8 +98,8 @@ if err != nil {
 }
 
 // Send the API request
-respone = &Response{}
-apiResp, err := client.Do(apiRequest, cAccResponse)
+responseBody = &map[string]interface{}{}
+apiResponse, err := client.Do(apiRequest, responseBody)
 if err != nil {
     return nil, err
 }
@@ -108,7 +108,7 @@ if err != nil {
 #### DELETE
 ```
 import (
-    apiClient "github.com/andreimilas/rest-api-client/client"
+    apiClient "github.com/andreimilas/rest-api-client"
 )
 
 ...
@@ -128,8 +128,8 @@ if err != nil {
 }
 
 // Send the API request
-responseBody = &Response{}
-httpResponse, err := client.Do(apiRequest, responseBody)
+responseBody = &map[string]interface{}{}
+apiResponse, err := client.Do(apiRequest, responseBody)
 if err != nil {
     return nil, err
 }
