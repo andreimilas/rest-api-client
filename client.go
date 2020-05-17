@@ -62,7 +62,7 @@ func (ac *APIClient) Do(apiReq *http.Request, respBody interface{}) (apiResp *ht
 	}
 
 	// Unmarshal response
-	if respBody != nil {
+	if respBody != nil && len(bResponse) != 0 {
 		err = json.Unmarshal(bResponse, respBody)
 		if err != nil {
 			return nil, err
